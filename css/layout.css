@@ -1,0 +1,78 @@
+html{
+    background: #f5f5d5;
+}
+body, body * {
+    box-sizing: border-box;
+}
+body{
+    width: 60%;
+    margin: 20px auto;
+    color: #909090;    
+}
+
+h2{
+    font-weight: 400;
+    font-size: 3rem;
+    color:#303133;
+    border-bottom: 1px solid #303133;
+}
+h4{
+    font-weight: 400;
+    font-size: 2rem;
+    color: #606266;            
+}
+p{
+    font-size: 1.3rem;
+}
+h2,h4{
+    margin: 1rem auto;
+}
+section{
+    margin-top: 50px;
+    padding-left: 30px;
+}
+section .content{
+    padding-left:30px;
+}
+.note{
+    color: #F56C6C;
+}
+.attr-list li{
+    margin-top: 10px;
+}
+li{
+    font-size: 1.2rem;
+}
+.item{
+    font-size: 1.5rem;
+}
+.instruction{
+
+}
+.item-1{
+    background: #409EFF;
+}
+.item-2{
+    background: #E6A23C;           
+}
+.item-3{
+    background: #F56C6C;          
+}
+.item-4{
+    background: #303133;
+}
+.item-5{
+    background: #909399;           
+}
+.item-6{
+    background: #606266;            
+}
+.item-7{
+    background: #C0C4CC;                       
+}
+.item-8{
+    background: #DCDFE6;                       
+}
+.item-9{
+    background: #F2F6FC;                                   
+}

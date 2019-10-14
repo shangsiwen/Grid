@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>指定项目放置区域</title>
+    <link rel="stylesheet" href="./../css/layout.css">
+    <style>
+        .grid {
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-areas: "header header header" "sidebar main mian" "footer footer footer";
+            height: auto;
+            border: 1px solid #ccc;
+        }
+
+        .item {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>指定单元格放置区域</h2>
+    <ul class="attr-list">
+        <li>grid-area属性的值可以是通过grid-template-area划分的区域名，也可以是网格线封闭形成的区域</li>
+    </ul>
+
+    <section>
+        <h4>划分区域</h4>
+        <div class="content">
+            <div class="grid" title="容器">
+                <div class="item item-1" title="项目">header区域(1,2,3)-1</div>
+                <div class="item item-2" title="项目">header区域(1,2,3)-2</div>
+                <div class="item item-3" title="项目">header区域(1,2,3)-3</div>
+                <div class="item item-4" title="项目">sidebar区域(4)-4</div>
+                <div class="item item-5" title="项目">main区域(5,6)-5</div>
+                <div class="item item-6" title="项目">main区域(5,6)-6</div>
+                <div class="item item-7" title="项目">footer区域(7,8,9)-7</div>
+                <div class="item item-8" title="项目">footer区域(7,8,9)-8</div>
+                <div class="item item-9" title="项目">footer区域(7,8,9)-9</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h4>通过区域名设置单元格1所在区域为header区(grid-area: header;)</h4>
+        <div class="content">
+            <div class="grid" title="容器">
+                <div class="item item-1" title="项目" style="grid-area: header;">header区域(1,2,3)-1</div>
+                <div class="item item-2" title="项目">header区域(1,2,3)-2</div>
+                <div class="item item-3" title="项目">header区域(1,2,3)-3</div>
+                <div class="item item-4" title="项目">sidebar区域(4)-4</div>
+                <div class="item item-5" title="项目">main区域(5,6)-5</div>
+                <div class="item item-6" title="项目">main区域(5,6)-6</div>
+                <div class="item item-7" title="项目">footer区域(7,8,9)-7</div>
+                <div class="item item-8" title="项目">footer区域(7,8,9)-8</div>
+                <div class="item item-9" title="项目">footer区域(7,8,9)-9</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h4>通过网格线设置单元格1所在的区域(grid-area: 1 / 1 / 2 / 4;)</h4>
+        <div class="content">
+            <div class="grid" title="容器">
+                <div class="item item-1" title="项目" style="grid-area: 1 / 1 / 2 / 4;">header区域(1,2,3)-1</div>
+                <div class="item item-2" title="项目">header区域(1,2,3)-2</div>
+                <div class="item item-3" title="项目">header区域(1,2,3)-3</div>
+                <div class="item item-4" title="项目">sidebar区域(4)-4</div>
+                <div class="item item-5" title="项目">main区域(5,6)-5</div>
+                <div class="item item-6" title="项目">main区域(5,6)-6</div>
+                <div class="item item-7" title="项目">footer区域(7,8,9)-7</div>
+                <div class="item item-8" title="项目">footer区域(7,8,9)-8</div>
+                <div class="item item-9" title="项目">footer区域(7,8,9)-9</div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

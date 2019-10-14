@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <title>单元格内容的对齐方式</title>
+    <link rel="stylesheet" href="./../css/layout.css">        
+    <style>
+        .grid{
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        .item{
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h2>设置网格中单元格的对齐方式</h2>
+    <section>
+        <ul class="attr-list">
+            <li>
+                justify-items(设置单元格内容的水平对齐方式):  start | end | center | stretch(默认值);
+            </li>
+            <li>
+                align-items(设置单元格内容的垂直对齐方式):  start | end | center | stretch(默认值);                    
+            </li>
+            <li>
+                place-items:是justify-items与align-items属性的简写。
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>justify-items:end</h4>
+        <div class="grid" style="justify-items: end" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>align-items:end</h4>
+        <div class="grid" style="align-items: end" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>justify-items:center</h4>
+        <div class="grid" style="justify-items:center" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>align-items:center</h4>
+        <div class="grid" style="align-items:center" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>justify-items:stretch;align-items:stretch;</h4>
+        <div class="grid" style="justify-items:stretch;align-items:stretch;" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+</body>
+</html>

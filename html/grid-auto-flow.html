@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>单元格的排列</title>
+    <link rel="stylesheet" href="./../css/layout.css">
+    <style>
+        .grid {
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px;
+            grid-auto-flow: row;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+
+        .item {
+            font-size: 40px;
+        }
+
+
+        .flow-row-dense{
+            grid-auto-flow: row dense;
+        }
+
+        .flow-column{
+            grid-auto-flow: column;            
+        }
+
+        .item-no-dense{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }        
+    </style>
+</head>
+
+<body>
+    <h2>
+        定义单元格的排列
+    </h2>
+    <p class="instruction">
+        划分网格以后，容器的子元素会按照顺序，自动放置在每一个网格。 默认的放置顺序是"先行后列"，
+        即先填满第一行，再开始放入第二行            
+    </p>
+    <ul class="attr-list">
+        <li>grid-auto-flow:row(默认值);先行后列</li>
+        <li>grid-auto-flow:column;先列后行</li>
+        <li>grid-auto-flow:row dense;表示"先行后列"，并且尽可能紧密填满，尽量不出现空格</li>
+        <li>grid-auto-flow:column dense;表示"先列后行"，并且尽可能紧密填满，尽量不出现空格</li>
+    </ul>
+
+    <section>
+        <h4>grid-auto-flow:row(默认排列)</h4>
+        <div class="content">
+            <div class="grid" title="容器">
+                <div class="item item-1" title="项目">1</div>
+                <div class="item item-2" title="项目">2</div>
+                <div class="item item-3" title="项目">3</div>
+                <div class="item item-4" title="项目">4</div>
+                <div class="item item-5" title="项目">5</div>
+                <div class="item item-6" title="项目">6</div>
+                <div class="item item-7" title="项目">7</div>
+                <div class="item item-8" title="项目">8</div>
+                <div class="item item-9" title="项目">9</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h4>grid-auto-flow:row(默认排列)可能出现的布局</h4>
+        <div class="content">
+            <div class="grid" title="容器">
+                <div class="item item-1 item-no-dense" title="项目">1</div>
+                <div class="item item-2 item-no-dense" title="项目">2</div>
+                <div class="item item-3" title="项目">3</div>
+                <div class="item item-4" title="项目">4</div>
+                <div class="item item-5" title="项目">5</div>
+                <div class="item item-6" title="项目">6</div>
+                <div class="item item-7" title="项目">7</div>
+                <div class="item item-8" title="项目">8</div>
+                <div class="item item-9" title="项目">9</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h4>grid-auto-flow:row dense</h4>
+        <div class="content">
+            <div class="grid flow-row-dense" title="容器">
+                <div class="item item-1 item-no-dense" title="项目">1</div>
+                <div class="item item-2 item-no-dense" title="项目">2</div>
+                <div class="item item-3" title="项目">3</div>
+                <div class="item item-4" title="项目">4</div>
+                <div class="item item-5" title="项目">5</div>
+                <div class="item item-6" title="项目">6</div>
+                <div class="item item-7" title="项目">7</div>
+                <div class="item item-8" title="项目">8</div>
+                <div class="item item-9" title="项目">9</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h4>grid-auto-flow:column</h4>
+        <div class="content">
+            <div class="grid flow-column" title="容器">
+                <div class="item item-1" title="项目">1</div>
+                <div class="item item-2" title="项目">2</div>
+                <div class="item item-3" title="项目">3</div>
+                <div class="item item-4" title="项目">4</div>
+                <div class="item item-5" title="项目">5</div>
+                <div class="item item-6" title="项目">6</div>
+                <div class="item item-7" title="项目">7</div>
+                <div class="item item-8" title="项目">8</div>
+                <div class="item item-9" title="项目">9</div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <title>单元格内容的对齐方式</title>
+    <link rel="stylesheet" href="./../css/layout.css">        
+    <style>
+        .grid{
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px;
+            height: 400px;
+            border: 1px solid #ccc;
+        }
+        .item{
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h2>设置网格的整个内容的对齐方式</h2>
+    <section>
+        <ul class="attr-list">
+            <li>
+                justify-content(设置网格的整个内容的对水平对齐方式):  start | end | center | stretch(默认值) | space-around | space-between | space-evenly;
+            </li>
+            <li>
+                align-content(设置网格的整个内容的对垂直对齐方式):   start | end | center | stretch(默认值) | space-around | space-between | space-evenly;
+            </li>
+            <li>
+                place-content:是justify-content与align-content属性的简写。
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>justify-content:end</h4>
+        <div class="grid" style="justify-content: end" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>align-content:end</h4>
+        <div class="grid" style="align-content: end" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>justify-content:center;align-content:center;</h4>
+        <div class="grid" style="justify-content:center;align-content:center;" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>justify-content:space-around</h4>
+        <div class="grid" style="justify-content:space-around" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>justify-content:space-between;</h4>
+        <div class="grid" style="justify-content:space-between;" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>justify-content:space-evenly;</h4>
+        <div class="grid" style="justify-content:space-evenly;" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>指定网格布局</title>
+    <link rel="stylesheet" href="./../css/layout.css">
+    <style>
+        .grid{
+            display: grid;
+            height: 200px;
+            border: 1px solid #ccc;
+        }
+        .inline-grid{
+            display: inline-grid;
+            width:400px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>网格分为行内网格与块级网格</h2>
+
+    <section>
+        <h4>块级网格(display:grid)</h4>
+        <div class="content">
+            left-content
+            <div class="grid" title="容器">
+                <div class="item-1" title="项目"></div>
+                <div class="item-2" title="项目"></div>
+                <div class="item-3" title="项目"></div>
+            </div>
+            right-content        
+        </div>
+    </section>
+
+    <section>
+        <h4>行内网格(display：inline-grid)</h4>
+        <div class="content">
+            left-content
+            <div class="inline-grid">
+                <div class="item-1"></div>
+                <div class="item-2"></div>
+                <div class="item-3"></div>
+            </div>
+            right-content                    
+        </div>
+    </section>
+
+    <p class="note">
+        注: 设为网格布局以后，容器子元素（项目）的float、display: inline-block、
+        display: table-cell、vertical-align和column-*等设置都将失效。
+    </p>
+</body>
+</html>

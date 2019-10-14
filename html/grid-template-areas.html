@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>划分区域</title>
+    <link rel="stylesheet" href="./../css/layout.css">
+    <style>
+        .grid {
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-areas: "header header header" "sidebar main mian" "footer footer footer";
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        .item{
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>划分区域</h2>
+    <ul class="attr-list">
+        <li>grid-template-area:可以将网格划分成多个区域，每个区域可以由一个或多个单元格组成.</li>
+    </ul>
+
+    <section>
+        <h4>划分区域并命名</h4>
+        <div class="content">
+            <div class="grid" title="容器">
+                <div class="item item-1" title="项目">header区域(1,2,3)-1</div>
+                <div class="item item-2" title="项目">header区域(1,2,3)-2</div>
+                <div class="item item-3" title="项目">header区域(1,2,3)-3</div>
+                <div class="item item-4" title="项目">sidebar区域(4)-4</div>
+                <div class="item item-5" title="项目">main区域(5,6)-5</div>
+                <div class="item item-6" title="项目">main区域(5,6)-6</div>
+                <div class="item item-7" title="项目">footer区域(7,8,9)-7</div>
+                <div class="item item-8" title="项目">footer区域(7,8,9)-8</div>
+                <div class="item item-9" title="项目">footer区域(7,8,9)-9</div>
+            </div>
+        </div>
+        <p> grid-template-areas: "header header header" "sidebar main mian" "footer footer footer";</p>
+    </section>
+</body>
+
+</html>

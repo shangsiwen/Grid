@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./../js/routes.data.js"></script>
+    <style>
+        body, body *{
+            box-sizing: border-box;
+        }
+        .box{
+            margin: 20px auto;
+            padding:0;
+            width: 60%;
+        }
+        .box li{
+            list-style: none;
+            margin-bottom:20px;
+        }
+        .box li:visited{
+            color: #000;
+        }
+        .box h3{
+            margin-bottom: 5px;
+            font-size: 1.8rem;
+        }
+        .item div{
+            font-size: 1.3rem;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li class="item">
+            <h3>
+                <a href="">
+                    sdasd         
+                </a>
+            </h3>
+            <div>
+                asdasdasdasdas
+            </div>
+        </li>
+    </ul>
+    <script>
+        const $ = document.querySelector.bind(document);
+        
+        function render(routes) {
+            const oBox = $('.box');
+            let html = '';
+            routes.forEach((route) => {
+                html += `
+                    <li class="item">
+                        <h3>
+                            <a href="${route.path}">
+                                ${route.title}
+                            </a>
+                        </h3>
+                        <div>
+                            ${route.keywords}                            
+                        </div>
+                    </li>                
+                `;
+            });
+            oBox.innerHTML = html;
+        }
+
+        render(routes);
+    </script>
+</body>
+</html>

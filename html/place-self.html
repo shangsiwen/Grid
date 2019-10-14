@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <title>单独设置单元格内容的对齐方式</title>
+    <link rel="stylesheet" href="./../css/layout.css">        
+    <style>
+        .grid{
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        .item{
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h2>单独设置网格中单元格的对齐方式</h2>
+    <section>
+        <ul class="attr-list">
+            <li>
+                justify-self(设置单元格内容的水平对齐方式):  start | end | center | stretch(默认值);
+            </li>
+            <li>
+                align-self(设置单元格内容的垂直对齐方式):  start | end | center | stretch(默认值);                    
+            </li>
+            <li>
+                place-self:是justify-self与align-self属性的简写。
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>单元格1内容水平向右对齐</h4>
+        <div class="grid" title="容器">
+            <div class="item item-1" title="项目" style="justify-self: end">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+    <section>
+        <h4>单元格1内容水平居中对齐</h4>
+        <div class="grid" title="容器">
+            <div class="item item-1" title="项目" style="justify-self: center">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>单元格1内容垂直方向顶部对齐</h4>
+        <div class="grid" title="容器">
+            <div class="item item-1" title="项目" style="align-self: end">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+    <section>
+        <h4>单元格1内容垂直方向居中对齐</h4>
+        <div class="grid" title="容器">
+            <div class="item item-1" title="项目" style="align-self: center">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>单元格1内容水平垂直居中对齐</h4>
+        <div class="grid" title="容器">
+            <div class="item item-1" title="项目" style="justify-self:center;align-self: center;">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>单元格1内容水平垂直方向拉伸</h4>
+        <div class="grid" title="容器">
+            <div class="item item-1" title="项目" style="justify-self:stretch;align-self: stretch;">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+</body>
+</html>

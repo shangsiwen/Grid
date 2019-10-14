@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <title>设置浏览器自动生成多余网格的宽高</title>
+    <link rel="stylesheet" href="./../css/layout.css">        
+    <style>
+        .grid{
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        .item{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>设置浏览器自动生成多余网格的宽高</h2>
+    <p class="instruction">
+        有时候，一些项目的指定位置，在现有网格的外部。比如网格只有3行，
+        但是某一个项目指定在第5行。这时，浏览器会自动生成多余的网格，以便放置项目
+    </p>
+    <section>
+        <ul class="attr-list">
+            <li>
+                grid-auto-rows:设置浏览器自动生成多余网格的高
+            </li>
+            <li>
+                grid-auto-columns:设置浏览器自动生成多余网格的宽                    
+            </li>
+            <li>
+                如果不指定这两个属性，浏览器会根据容器剩余的宽高，决定新增网格的列宽和行高
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>3 x 3网格，超出网格行的情景</h4>
+        <div class="grid" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" style="grid-column:1/4;" title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+    <section>
+        <h4>3 x 3网格，设置超出网格行的高(grid-auto-rows:100px;)</h4>
+        <div class="grid" style="grid-auto-rows: 100px;" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" style="grid-column:1/4;"  title="项目">8</div>
+            <div class="item item-9" title="项目">9</div>
+        </div>
+    </section>
+
+    <section>
+        <h4>3 x 3网格，超出网格列的情景</h4>
+        <div class="grid" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目" style="grid-column:3/5;" >9</div>
+        </div>
+        <p>
+            由于第9个网格设置了grid-column:3/5，这样第九网格就占居两列，使得浏览器
+            自动添加一列，而且由于网格容器的justify-items属性默认值为stretch.
+            使得新增的列的宽为剩余容器的宽，从而出现拉伸情况
+        </p>
+    </section>
+    <section>
+        <h4>3 x 3网格，设置超出网格列的宽(grid-auto-columns: 100px;)</h4>
+        <div class="grid" style="grid-auto-columns: 100px;" title="容器">
+            <div class="item item-1" title="项目">1</div>
+            <div class="item item-2" title="项目">2</div>
+            <div class="item item-3" title="项目">3</div>
+            <div class="item item-4" title="项目">4</div>
+            <div class="item item-5" title="项目">5</div>
+            <div class="item item-6" title="项目">6</div>
+            <div class="item item-7" title="项目">7</div>
+            <div class="item item-8" title="项目">8</div>
+            <div class="item item-9" title="项目" style="grid-column:3/5;">9</div>
+        </div>
+    </section>
+
+
+</body>
+</html>

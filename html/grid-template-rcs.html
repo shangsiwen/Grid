@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>划分单元格</title>
+    <link rel="stylesheet" href="./../css/layout.css">    
+    <style>
+        .grid{
+            display: grid;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        .item{
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>划分单元格</h2>
+
+    <section>
+        <ul class="attr-list">
+            <li>
+                grid-template-rows指定将网格划分成多少行以及每一行的高度.
+                如:grid-template-rows: 100px 100px 100px;
+                表示将网格分为3行，每一行的高度依次分别为100px,100px,100px;
+            </li>
+            <li>
+                grid-template-columns指定将网格划分成多少列以及每一列的宽度.
+                如:grid-template-columns: 100px 100px 100px;
+                表示将网格分为6列，每一列的宽度依次分别为100px,100px,100px;
+            </li>
+            <li>
+                grid-template-rows指定行网格线的名字,
+                如:grid-template-rows: [r1] 100px [r2] 100px [r3] 100px [r4];                
+                每个网格线都有一个固定的数字网格线名称。
+            </li>
+            <li>
+                grid-template-columns指定列网格线的名字,
+                如:grid-template-columns: [c1] 100px [c2] 100px [c3] 100px [c4];                
+            </li>
+            <li>
+                后期可以通过网格线的名字划分区域。
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>9行1列的网格</h4>
+        <div class="content">
+            <div class="grid" style="grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px;" title="容器">
+                <div class="item item-1" title="项目">1</div>
+                <div class="item item-2" title="项目">2</div>
+                <div class="item item-3" title="项目">3</div>
+                <div class="item item-4" title="项目">4</div>
+                <div class="item item-5" title="项目">5</div>
+                <div class="item item-6" title="项目">6</div>
+                <div class="item item-7" title="项目">7</div>
+                <div class="item item-8" title="项目">8</div>
+                <div class="item item-9" title="项目">9</div>
+            </div>
+        </div>
+        <p>
+            网格容器grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+        </p>
+    </section>
+
+    <section>
+        <h4>1行9列的网格</h4>
+        <div class="content">
+            <div class="grid" style="grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px;" title="容器">
+                <div class="item item-1" title="项目">1</div>
+                <div class="item item-2" title="项目">2</div>
+                <div class="item item-3" title="项目">3</div>
+                <div class="item item-4" title="项目">4</div>
+                <div class="item item-5" title="项目">5</div>
+                <div class="item item-6" title="项目">6</div>
+                <div class="item item-7" title="项目">7</div>
+                <div class="item item-8" title="项目">8</div>
+                <div class="item item-9" title="项目">9</div>
+            </div>
+        </div>
+        <p>
+            网格容器grid-template-column: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+        </p>
+    </section>
+
+    <section>
+        <h5>拓展</h5>
+        <ul>
+            <li>repeat()函数：可以同来简化书写重复的值，该函数接受两个参数，
+                第一个参数表示需要重复的次数，第二个参数表述需要重复的值.
+                <p>
+                    如:grid-template-rows: 100px 100px 100px =>
+                    grid-template-rows: repeat(3, 100);
+                </p>
+            </li>
+            <li>
+                auto-fill关键字:有时，单元格的大小是固定的，但是容器的大小不确定。
+                如果希望每一行（或每一列）容纳尽可能多的单元格，这时可以使用auto-fill
+                关键字表示自动填充.
+                <p>
+                    如:grid-template-rows: repeat(auto-fill, 100);
+                </p>
+            </li>
+            <li>
+                fr关键字:通过比例的关系来表示大小。该关键字还可以配合绝对长度的单位结合使用。
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
